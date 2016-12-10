@@ -5,3 +5,12 @@ project=$(cat $(dirname ${0})/project)
 \rm -rf ~/tmp/${project}-build/bin
 \rm -rf ~/tmp/${project}-build/share
 \rm -rf ~/tmp/${project}-build/working
+
+\rm -f ~/Projects/${project}/Makefile.in
+\rm -f ~/Projects/${project}/aclocal.m4
+\rm -rf ~/Projects/${project}/autom4te.cache
+\rm -f ~/Projects/${project}/compile
+\rm -f ~/Projects/${project}/configure
+\rm -f ~/Projects/${project}/depcomp
+\rm -f ~/Projects/${project}/install-sh
+\rm -f ~/Projects/${project}/missing
