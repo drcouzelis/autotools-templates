@@ -1,0 +1,11 @@
+#!/usr/bin/bash
+
+project=$(cat $(dirname ${0})/project)
+
+~/tmp/${project}-build/wipe && \
+
+mkdir -p ~/tmp/${project}-build/working && \
+cd ~/tmp/${project}-build/working && \
+
+autoreconf --install ~/Projects/${project} && \
+~/Projects/${project}/configure --prefix=/home/drcouzelis/tmp/${project}-build
