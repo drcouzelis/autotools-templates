@@ -36,12 +36,12 @@ AC_PROG_CC
 # Check for headers.
 #
 # https://www.gnu.org/software/autoconf/manual/autoconf.html#Generic-Headers
-AC_CHECK_HEADER([myneededheader.h], [], [AC_MSG_ERROR([myneededheader.h not found.])])
+AC_CHECK_HEADER([myneededheader.h], [], [AC_MSG_ERROR([header not found.])])
 
 # Check for libraries.
 #
 # https://www.gnu.org/software/autoconf/manual/autoconf.html#Libraries
-AC_SEARCH_LIBS([a_needed_library_function_name], [myneededlibrary], [], [AC_MSG_ERROR([myneededlibrary not found.])])
+AC_SEARCH_LIBS([a_needed_library_function_name], [myneededlibrary], [], [AC_MSG_ERROR([library not found.])])
 
 # Rebuild these header files.
 #
