@@ -7,6 +7,16 @@
 # https://www.gnu.org/software/automake/manual/html_node/Program-Sources.html#Program-Sources
 bin_PROGRAMS = myappname
 
+# The "-D" option provides the compiler with a variable
+# that points to the location of the data files.
+#
+# NOTE: "CPP" stands for "C Pre-Processor".
+#
+# https://www.gnu.org/software/automake/manual/html_node/Program-and-Library-Variables.html
+#
+# https://www.gnu.org/software/automake/manual/html_node/Uniform.html
+myappname_CPPFLAGS = -Wall -Werror -DPKGDATADIR='"$(pkgdatadir)"'
+
 # A list of all of the source code files.
 # The "SOURCES" suffix marks it as source code.
 #
@@ -14,14 +24,6 @@ bin_PROGRAMS = myappname
 myappname_SOURCES = \
   src/myappname.c \
   src/myappname.h
-
-# The "-D" option provides the compiler with a variable
-# that points to the location of the data files.
-#
-# NOTE: "CPP" stands for "C Pre-Processor".
-#
-# https://www.gnu.org/software/automake/manual/html_node/Program-and-Library-Variables.html
-myappname_CPPFLAGS = -Wall -Werror -DPKGDATADIR='"$(pkgdatadir)"'
 
 # DATA FILES - IMAGES
 
