@@ -15,7 +15,7 @@ bin_PROGRAMS = myappname
 # https://www.gnu.org/software/automake/manual/html_node/Program-and-Library-Variables.html
 #
 # https://www.gnu.org/software/automake/manual/html_node/Uniform.html
-myappname_CPPFLAGS = -Wall -Werror -DPKGDATADIR='"$(pkgdatadir)"'
+myappname_CPPFLAGS = -Wall -DPKGDATADIR='"$(pkgdatadir)"'
 
 # A list of all of the source code files.
 # The "SOURCES" suffix marks it as source code.
